@@ -4,6 +4,10 @@
  */
 package Vues;
 
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Admin
@@ -27,18 +31,26 @@ public class frmAccueilLoading extends javax.swing.JFrame {
     private void initComponents() {
 
         background = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblBare = new javax.swing.JLabel();
+        lblLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(java.awt.Color.white);
+        setPreferredSize(new java.awt.Dimension(745, 800));
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         background.setBackground(new java.awt.Color(0, 204, 204));
+        background.setPreferredSize(new java.awt.Dimension(745, 800));
 
-        jLabel2.setText("SIMEDICAL");
+        lblBare.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/blackLine.png"))); // NOI18N
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/png.png"))); // NOI18N
+        lblLogo.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        lblLogo.setText("SIMEDICAL");
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
@@ -46,38 +58,86 @@ public class frmAccueilLoading extends javax.swing.JFrame {
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel3)
-                .addGap(118, 118, 118)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(lblBare, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(91, 91, 91)
+                .addComponent(lblLogo, javax.swing.GroupLayout.DEFAULT_SIZE, 334, Short.MAX_VALUE)
+                .addGap(127, 127, 127))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(backgroundLayout.createSequentialGroup()
-                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(backgroundLayout.createSequentialGroup()
-                        .addGap(144, 144, 144)
-                        .addComponent(jLabel3))
-                    .addGroup(backgroundLayout.createSequentialGroup()
-                        .addGap(279, 279, 279)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(2321, Short.MAX_VALUE))
+                .addGap(48, 48, 48)
+                .addComponent(lblBare, javax.swing.GroupLayout.DEFAULT_SIZE, 797, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addGap(299, 299, 299)
+                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 856, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+
+      final int MAX_X = 500;
+      final int MIN_X = 150;
+      
+      Thread animation = new Thread(new Runnable(){
+          @Override
+          public void run() {
+            int x = 200;
+            int y = 300;
+            while(true){
+                lblLogo.setLocation(x,y);
+                x +=10;
+                
+                try{
+                    Thread.sleep(35);
+                }catch(Exception e){
+                    
+                }
+            }
+          }
+      });
+       
+        Thread animeBarre = new Thread(new Runnable(){
+          @Override
+          public void run() {
+            int x = 50;
+            int y = 80;
+            while(true){
+                lblBare.setLocation(x,y);
+                x -=10;
+                
+                try{
+                    Thread.sleep(85);
+                }catch(Exception e){
+                    
+                }
+            }
+          }
+      });
+       animation.start();
+       animeBarre.start();
+       
+       
+      
+      frmAuthentification frmAuth = new frmAuthentification();
+      frmAuth.setVisible(true);
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -116,7 +176,7 @@ public class frmAccueilLoading extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblBare;
+    private javax.swing.JLabel lblLogo;
     // End of variables declaration//GEN-END:variables
 }
