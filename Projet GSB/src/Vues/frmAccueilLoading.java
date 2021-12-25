@@ -91,11 +91,8 @@ public class frmAccueilLoading extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-
-      final int MAX_X = 500;
-      final int MIN_X = 150;
       
-      Thread animation = new Thread(new Runnable(){
+        Thread animation = new Thread(new Runnable(){
           @Override
           public void run() {
             int x = 200;
@@ -132,9 +129,7 @@ public class frmAccueilLoading extends javax.swing.JFrame {
       });
        animation.start();
        animeBarre.start();
-       
-       
-      
+
       frmAuthentification frmAuth = new frmAuthentification();
       frmAuth.setVisible(true);
     }//GEN-LAST:event_formWindowOpened

@@ -8,6 +8,9 @@ package Vues;
 import Entity.ConnexionBdd;
 import Entity.FonctionsMetier;
 import Entity.Utilisateur;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
 
 public class frmAuthentification extends javax.swing.JFrame {
     FonctionsMetier fm;
@@ -37,6 +40,11 @@ public class frmAuthentification extends javax.swing.JFrame {
         lblErreur = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 0, 0));
@@ -168,6 +176,32 @@ public class frmAuthentification extends javax.swing.JFrame {
     private void btnConnexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConnexionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnConnexionActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+
+        Thread launchForm = new Thread(new Runnable(){
+            @Override
+            public void run() {
+                
+                boolean check = true;
+                try {
+                    Thread.sleep(4000);
+                     setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(frmAuthentification.class.getName()).log(Level.SEVERE, null, ex);
+                }
+               
+                    frmAuthentification frmAuth = new frmAuthentification();
+                    frmAuth.setVisible(true);
+                  
+                
+               
+            }
+            
+        });
+        launchForm.start();
+        launchForm.stop();
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
