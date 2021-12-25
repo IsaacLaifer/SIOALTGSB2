@@ -36,7 +36,7 @@ public class frmAccueil extends javax.swing.JFrame {
         lblLogoStats = new javax.swing.JLabel();
         lblLogoPraticien = new javax.swing.JLabel();
         lblShowText = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lblAccueilMenu = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -57,6 +57,9 @@ public class frmAccueil extends javax.swing.JFrame {
 
         lblLogoTask.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/taskLogo.png"))); // NOI18N
         lblLogoTask.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblLogoTaskMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 lblLogoTaskMousePressed(evt);
             }
@@ -98,11 +101,11 @@ public class frmAccueil extends javax.swing.JFrame {
         lblShowText.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         lblShowText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/homeLogo.png"))); // NOI18N
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        lblAccueilMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAccueilMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/homeLogo.png"))); // NOI18N
+        lblAccueilMenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
+                lblAccueilMenuMouseClicked(evt);
             }
         });
 
@@ -113,7 +116,7 @@ public class frmAccueil extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(lblAccueilMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -155,7 +158,7 @@ public class frmAccueil extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addComponent(lblShowText, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel4)
+                .addComponent(lblAccueilMenu)
                 .addContainerGap(511, Short.MAX_VALUE))
         );
 
@@ -212,11 +215,17 @@ public class frmAccueil extends javax.swing.JFrame {
         lblShowText.setText("");
     }//GEN-LAST:event_lblLogoStatsMouseReleased
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+    private void lblAccueilMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAccueilMenuMouseClicked
         this.setVisible(false);
         frmAccueil frmAcc = new frmAccueil();
         frmAcc.setVisible(true);
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }//GEN-LAST:event_lblAccueilMenuMouseClicked
+
+    private void lblLogoTaskMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblLogoTaskMouseClicked
+        this.setVisible(false);
+        frmAccueilSpe frmAccSpe = new frmAccueilSpe();
+        frmAccSpe.setVisible(true);
+    }//GEN-LAST:event_lblLogoTaskMouseClicked
 
     /**
      * @param args the command line arguments
@@ -256,8 +265,8 @@ public class frmAccueil extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblAccueilMenu;
     private javax.swing.JLabel lblLogoActivite;
     private javax.swing.JLabel lblLogoPraticien;
     private javax.swing.JLabel lblLogoStats;

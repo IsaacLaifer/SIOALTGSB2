@@ -52,7 +52,7 @@ public class FonctionsMetier implements IMetier
         try {
             maCnx=ConnexionBdd.getCnx();
             //on ecrit dans le ps la requete
-            ps= maCnx.prepareStatement("select * from praticien");
+            ps= maCnx.prepareStatement("select PRA_NUM,PRA_NOM,PRA_PRENOM,PRA_ADRESSE,PRA_CP,PRA_VILLE,PRA_COEFNOTORIETE,tc from praticien");
             
             rs=ps.executeQuery();
             while(rs.next())
@@ -73,7 +73,7 @@ public class FonctionsMetier implements IMetier
         try {
             maCnx=ConnexionBdd.getCnx();
             //on ecrit dans le ps la requete
-            ps= maCnx.prepareStatement("select * from specialite");
+            ps= maCnx.prepareStatement("select SPE_CODE, SPE_LIBELLE from specialite");
             
             rs=ps.executeQuery();
             while(rs.next())
@@ -94,7 +94,7 @@ public class FonctionsMetier implements IMetier
         try {
             maCnx=ConnexionBdd.getCnx();
             //on ecrit dans le ps la requete
-            ps= maCnx.prepareStatement("select * from activite_compl");
+            ps= maCnx.prepareStatement("select AC_NUM, AC_LIEU, AC_THEME, AC_MOTIF from activite_compl");
             
             rs=ps.executeQuery();
             while(rs.next())
