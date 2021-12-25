@@ -27,30 +27,196 @@ public class frmAccueil extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        lblLogoTask = new javax.swing.JLabel();
+        lblTest = new javax.swing.JLabel();
+        lblLogoActivite = new javax.swing.JLabel();
+        lblLogoStats = new javax.swing.JLabel();
+        lblLogoPraticien = new javax.swing.JLabel();
+        lblShowText = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
+        setPreferredSize(new java.awt.Dimension(745, 800));
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/horizontalBlackLine.png"))); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setText("TABLEAU DE BORD");
+
+        lblLogoTask.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/taskLogo.png"))); // NOI18N
+        lblLogoTask.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblLogoTaskMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lblLogoTaskMouseReleased(evt);
+            }
+        });
+
+        lblLogoActivite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/calendarLogo.png"))); // NOI18N
+        lblLogoActivite.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblLogoActiviteMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lblLogoActiviteMouseReleased(evt);
+            }
+        });
+
+        lblLogoStats.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/statsLogo.png"))); // NOI18N
+        lblLogoStats.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblLogoStatsMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lblLogoStatsMouseReleased(evt);
+            }
+        });
+
+        lblLogoPraticien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/praticienLogo.png"))); // NOI18N
+        lblLogoPraticien.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblLogoPraticienMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                lblLogoPraticienMouseReleased(evt);
+            }
+        });
+
+        lblShowText.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        lblShowText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/homeLogo.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(214, 214, 214)
+                        .addComponent(lblTest))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(229, 229, 229)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblLogoTask)
+                            .addComponent(lblLogoActivite))
+                        .addGap(39, 39, 39)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblLogoPraticien)
+                            .addComponent(lblLogoStats))))
+                .addContainerGap(220, Short.MAX_VALUE))
+            .addComponent(lblShowText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblLogoPraticien)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblLogoActivite)
+                            .addComponent(lblLogoStats))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblTest))
+                    .addComponent(lblLogoTask))
+                .addGap(46, 46, 46)
+                .addComponent(lblShowText, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4)
+                .addContainerGap(511, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 592, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 861, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowOpened
+
+    private void lblLogoPraticienMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblLogoPraticienMousePressed
+        lblShowText.setText("Insérer / Modifier / Lister les praticiens");
+    }//GEN-LAST:event_lblLogoPraticienMousePressed
+
+    private void lblLogoPraticienMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblLogoPraticienMouseReleased
+        lblShowText.setText("");
+    }//GEN-LAST:event_lblLogoPraticienMouseReleased
+
+    private void lblLogoTaskMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblLogoTaskMousePressed
+        lblShowText.setText("Insérer / Modifier / Lister les spécialités");
+    }//GEN-LAST:event_lblLogoTaskMousePressed
+
+    private void lblLogoTaskMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblLogoTaskMouseReleased
+        lblShowText.setText("");
+    }//GEN-LAST:event_lblLogoTaskMouseReleased
+
+    private void lblLogoActiviteMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblLogoActiviteMousePressed
+        lblShowText.setText("Insérer / Modifier / Lister les activités");
+    }//GEN-LAST:event_lblLogoActiviteMousePressed
+
+    private void lblLogoActiviteMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblLogoActiviteMouseReleased
+        lblShowText.setText("");
+    }//GEN-LAST:event_lblLogoActiviteMouseReleased
+
+    private void lblLogoStatsMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblLogoStatsMousePressed
+        lblShowText.setText("Avoir des statistiques sous forme d'indicateur");
+    }//GEN-LAST:event_lblLogoStatsMousePressed
+
+    private void lblLogoStatsMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblLogoStatsMouseReleased
+        lblShowText.setText("");
+    }//GEN-LAST:event_lblLogoStatsMouseReleased
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        this.setVisible(false);
+        frmAccueil frmAcc = new frmAccueil();
+        frmAcc.setVisible(true);
+    }//GEN-LAST:event_jLabel4MouseClicked
 
     /**
      * @param args the command line arguments
@@ -88,5 +254,15 @@ public class frmAccueil extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblLogoActivite;
+    private javax.swing.JLabel lblLogoPraticien;
+    private javax.swing.JLabel lblLogoStats;
+    private javax.swing.JLabel lblLogoTask;
+    private javax.swing.JLabel lblShowText;
+    private javax.swing.JLabel lblTest;
     // End of variables declaration//GEN-END:variables
 }
